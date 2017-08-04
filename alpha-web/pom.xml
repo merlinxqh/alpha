@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>alpha-web</artifactId>
+    <packaging>jar</packaging>
+
+    <parent>
+        <artifactId>alpha</artifactId>
+        <groupId>com.leo</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <name>alpha-web Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <properties>
+        <start-class>com.leo.alpha.AlphaApplication</start-class>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.leo</groupId>
+            <artifactId>alpha-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>alpha-web</finalName>
+        <plugins>
+            <!-- maven 插件 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
