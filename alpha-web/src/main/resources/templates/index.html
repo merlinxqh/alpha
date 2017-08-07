@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/ionicons.css}" rel="stylesheet" />
+    <link th:href="@{/css/material-design-iconic-font.min.css}" rel="stylesheet" />
+    <!-- Custom Files -->
+    <link th:href="@{/css/helper.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/common.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/notification.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/js/common/magnific-popup/magnific-popup.css}" rel="stylesheet" type="text/css"  />
+    <link th:href="@{/js/common/timepicker/bootstrap-datetimepicker.min.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/js/common/fileinput/fileinput.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/summernote.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/bootstrap-wysihtml5.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/wysiwyg-color.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/js/common/colorpicker/colorpicker.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/js/common/steps/jquery.steps.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/js/common/select2/select2.min.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/js/common/datatables/jquery.dataTables.min.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/js/common/gridster/jquery.gridster.min.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!--/*@thymesVar id="name" type="java.lang.String"*/-->
+<p th:text="'Hello！, ' + ${name} + '!'" >3333</p>
+<!-- modal -->
+<div id="base_modal" class="modal fade" tabindex="-1" role="dialog"
+     aria-hidden="true"
+     style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="overflow: auto;"></div>
+    </div>
+</div>
+
+<div id="base_modal_center" class="modal fade text-center" tabindex="-1" role="dialog"
+     aria-hidden="true"
+     style="display: none;">
+    <div class="modal-dialog modal-lg" style="display: inline-block; width: auto;min-width: 400px;min-height: 300px;">
+        <div class="modal-content" style="overflow: auto;"></div>
+    </div>
+</div>
+</body>
+<script th:src="@{/js/common/jquery.min.js}"></script>
+<script th:src="@{/js/common/gridster/jquery.gridster.min.js}"></script>
+<script th:src="@{/js/common/bootstrap.js}"></script>
+<script th:src="@{/js/common/bootstrap-treeview.js}"></script>
+<script th:src="@{/js/common/bootstrap-paginator.js}"></script>
+<script th:src="@{/js/common/jquery.nicescroll.js}"></script>
+<script th:src="@{/js/common/jquery-detectmobile/detect.js}"></script>
+<script th:src="@{/js/common/fastclick/fastclick.js}"></script>
+<script th:src="@{/js/common/jquery-slimscroll/jquery.slimscroll.js}"></script>
+<script th:src="@{/js/common/fileinput/fileinput.js}"></script>
+<script th:src="@{/js/common/datatables/jquery.dataTables.min.js}"></script>
+<script th:src="@{/js/common/datatables/dataTables.bootstrap.js}"></script>
+
+<!-- CUSTOM JS -->
+<script th:src="@{/js/common/wow.min.js}"></script>
+<script th:src="@{/js/common/jquery.app.js}"></script>
+<script th:src="@{/js/common/ajax.util.js}"></script>
+<script th:src="@{/js/common/base-ui.js}"></script>
+<script th:src="@{/js/common/template.js}"></script>
+<script th:src="@{/js/common/bootstrap-table/bootstrap-table.js}"></script>
+<script th:src="@{/js/common/bootstrap-table/bootstrap-table-zh-CN.js}"></script>
+<script th:src="@{/js/common/bootstrapValidator.js}"></script>
+<script th:src="@{/js/common/notifications/notify.min.js}"></script>
+<script th:src="@{/js/common/notifications/notify-metro.js}"></script>
+<script th:src="@{/js/common/notifications/notifications.js}"></script>
+<script th:src="@{/js/common/magnific-popup/magnific-popup.js}"></script>
+<script th:src="@{/js/common/timepicker/bootstrap-datetimepicker.min.js}"></script>
+<script th:src="@{/js/common/timepicker/bootstrap-datetimepicker.zh-CN.js}"></script>
+<script th:src="@{/js/common/colorpicker/bootstrap-colorpicker.js}"></script>
+<script th:src="@{/js/common/select2/select2.min.js}"></script>
+
+<script th:src="@{/js/common/bootstrap-wysihtml5/wysihtml5-0.3.0.js}"></script>
+<script th:src="@{/js/common/bootstrap-wysihtml5/bootstrap-wysihtml5.js}"></script>
+<script th:src="@{/js/common/summernote.min.js}"></script>
+<script type="text/javascript">
+    var resizefunc = [];
+    var rootPath="${name}";
+    var imgPath="${imgPath}";//图片服务器路径
+</script>
+</html>

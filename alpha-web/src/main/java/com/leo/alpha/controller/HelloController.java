@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -43,14 +44,13 @@ public class HelloController {
         return "success";
     }
 
-    @RequestMapping("/hello/{name}")
-    public String index(@PathVariable String name, ModelMap model){
-        model.put("name", name);
+    @RequestMapping("/index/{name}")
+    public String index(@PathVariable("name") String name,ModelMap model){
+        model.put("name",name);
         /**
          * 默认模板文件夹:src/main/resources/templates/目录下添加一个模板文件hello.html
          * 默认静态资源文件夹:src/main/resources/static
-         *
          */
-        return "hello";
+        return "index";
     }
 }
