@@ -2,7 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>hello</title>
+    <meta name="renderer" content="webkit"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
     <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
     <link th:href="@{/css/ionicons.css}" rel="stylesheet" />
@@ -24,6 +27,8 @@
     <link th:href="@{/js/common/select2/select2.min.css}" rel="stylesheet" type="text/css" />
     <link th:href="@{/js/common/datatables/jquery.dataTables.min.css}" rel="stylesheet" type="text/css" />
     <link th:href="@{/js/common/gridster/jquery.gridster.min.css}" rel="stylesheet" type="text/css"/>
+    <script th:src="@{/js/common/html5shiv.js}"></script>
+    <script th:src="@{/js/common/respond.min.js}"></script>
 </head>
 <body class="fixed-left main-body" style="overflow: hidden;">
 <div id="wrapper">
@@ -33,37 +38,34 @@
         <!-- LOGO -->
         <div class="topbar-left">
             <div class="text-center">
-                <a href="javascript:void(0);" class="logo"><span>abcd</span></a>
+                <a href="javascript:void(0);" class="logo"><span>sddd22</span></a>
             </div>
         </div>
 
         <!-- Button mobile view to collapse sidebar menu -->
         <div class="navbar navbar-default" role="navigation">
             <div class="container">
-                <div class="">
-                    <div  class="pull-left">
-                        <button class="button-menu-mobile open-left">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <span class="clearfix"></span>
-                    </div>
-
-                    <ul class="nav navbar-nav navbar-right pull-right">
-                        <li class="dropdown hidden-xs">
-                        </li>
-                        <li class="hidden-xs">
-                        </li>
-                        <li class="dropdown">
-                            <a th:href="@{/index}" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="" alt="user-img" class="img-circle" /> </a>
-                            <ul class="dropdown-menu">
-                                <li><a th:href="@{/index}"><i class="md md-face-unlock"></i> 个人中心</a></li>
-                                <li><a th:href="@{/user/modifyPwd}" data-toggle="modal" data-target="#base_modal"><i class="md md-settings"></i> 修改密码</a></li>
-                                <li><a th:href="@{/logout}"><i class="md md-settings-power"></i> 退出</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <div  class="pull-left">
+                    <button class="button-menu-mobile open-left">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <span class="clearfix"></span>
                 </div>
-                <!--/.nav-collapse -->
+
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li class="dropdown hidden-xs">
+                    </li>
+                    <li class="hidden-xs">
+                    </li>
+                    <li class="dropdown">
+                        <a th:href="@{/index}" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="" alt="user-img" class="img-circle" /> </a>
+                        <ul class="dropdown-menu">
+                            <li><a th:href="@{/index}"><i class="md md-face-unlock"></i> 个人中心</a></li>
+                            <li><a th:href="@{/user/modifyPwd}" data-toggle="modal" data-target="#base_modal"><i class="md md-settings"></i> 修改密码</a></li>
+                            <li><a th:href="@{/logout}"><i class="md md-settings-power"></i> 退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -75,37 +77,24 @@
         <div class="sidebar-inner slimscrollleft">
             <!--- Divider -->
             <div id="sidebar-menu">
-
                 <ul>
-                    <!--<c:if test="${fn:length(menuList) gt 0}">-->
-                        <!--<c:forEach items="${menuList}" var="item">-->
-                            <!--<c:choose>-->
-                                <!--<c:when test="${fn:length(item.childList) gt 0}">-->
-                                    <!--<li class="has_sub">-->
-                                        <!--<a href="#" class="waves-effect"><i class="${item.iconCode}"></i><span>${item.name}</span><span class="pull-right"><i class="md md-add"></i></span></a>-->
-                                        <!--<ul class="list-unstyled">-->
-                                            <!--<c:forEach items="${item.childList}" var="child">-->
-                                                <!--<li>-->
-                                                    <!--<a href="${ctx}/${child.url}" data-target="divload" data-div="baseContainer" class="waves-effect">-->
-                                                        <!--<i class="${child.iconCode}"></i>-->
-                                                        <!--<span>${child.name}</span>-->
-                                                    <!--</a>-->
-                                                <!--</li>-->
-                                            <!--</c:forEach>-->
-                                        <!--</ul>-->
-                                    <!--</li>-->
-                                <!--</c:when>-->
-                                <!--<c:otherwise>-->
-                                    <!--<li>-->
-                                        <!--<a href="${ctx}/${item.url}" data-target="divload" data-div="baseContainer" class="waves-effect">-->
-                                            <!--<i class="${item.iconCode }"></i>-->
-                                            <!--<span>${item.name } </span>-->
-                                        <!--</a>-->
-                                    <!--</li>-->
-                                <!--</c:otherwise>-->
-                            <!--</c:choose>-->
-                        <!--</c:forEach>-->
-                    <!--</c:if>-->
+                    <li class="has_sub">
+                        <a th:href="@{/index}" class="waves-effect"><i class=""></i><span>一级菜单1</span><span class="pull-right"><i class="md md-add"></i></span></a>
+                        <ul class="list-unstyled">
+                                <li>
+                                    <a th:href="@{/index}" data-target="divload" data-div="baseContainer" class="waves-effect">
+                                        <i class=""></i>
+                                        <span>二级菜单</span>
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a th:href="@{/index2}" data-target="divload" data-div="baseContainer" class="waves-effect">
+                            <i class=""></i>
+                            <span>一级菜单 </span>
+                        </a>
+                    </li>
                 </ul>
                 <div class="clearfix"></div>
             </div>
@@ -129,8 +118,6 @@
     <!-- End Right content here -->
     <!-- ============================================================== -->
 </div>
-<!--/*@thymesVar id="name" type="java.lang.String"*/-->
-<p th:text="'Hello！, ' + ${name} + '!'" >3333</p>
 <!-- modal -->
 <div id="base_modal" class="modal fade" tabindex="-1" role="dialog"
      aria-hidden="true"

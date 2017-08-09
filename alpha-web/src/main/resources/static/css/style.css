@@ -1209,6 +1209,8 @@ lesshat-selector {
   top: 0px;
   z-index: 999;
   background: #ffffff;
+  height: 50px;
+  overflow: hidden;
   position: fixed;
   -webkit-box-shadow: 1px 0 3px 0 rgba(0,0,0,0.2);
   box-shadow: 1px 0 3px 0 rgba(0,0,0,0.2);
@@ -1367,7 +1369,7 @@ body.fixed-left .side-menu.left {
   border: none;
   line-height: 50px;
   color: #fff;
-  padding: 12px 15px;
+  padding: 2px 15px;
 }
 .button-menu-mobile:hover {
   color: #eee;
